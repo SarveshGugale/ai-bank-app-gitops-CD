@@ -15,6 +15,7 @@ spec:
       labels:
         app: bankapp
     spec:
+<<<<<<< HEAD
       initContainers:
         - name: wait-for-mysql
           image: busybox:1.36
@@ -26,6 +27,8 @@ spec:
             limits:
               memory: "64Mi"
               cpu: "100m"
+=======
+>>>>>>> 00c036a (Remove Ollama init container)
       containers:
       - name: bankapp
         image: sarvesh01234/ai-bankapp:latest
