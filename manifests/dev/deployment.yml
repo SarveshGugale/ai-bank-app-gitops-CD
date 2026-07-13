@@ -20,7 +20,7 @@ spec:
     spec:
       initContainers:
         - name: wait-for-mysql
-          image: sarvesh01234/ai-bankapp:89ec34d22ee6ba340d401a851d4043ea2e3085b0
+          image: sarvesh01234/ai-bankapp:a57f423a0603b46d7825bc817b49c8a2e5a17ff6
           command: ["/bin/sh","-c","until nc -z mysql-service 3306; do sleep 2; done"]
           resources:
             requests:
@@ -32,7 +32,7 @@ spec:
 
       containers:
         - name: bankapp
-          image: sarvesh01234/ai-bankapp:89ec34d22ee6ba340d401a851d4043ea2e3085b0
+          image: sarvesh01234/ai-bankapp:a57f423a0603b46d7825bc817b49c8a2e5a17ff6
           ports:
             - containerPort: 8080
           envFrom:
