@@ -32,7 +32,7 @@ spec:
 
       containers:
         - name: bankapp
-          image: sarvesh01234/ai-bankapp:0c4126b66667dd4cf1c84349f7cf3a5c3ba93ddc
+          image: sarvesh01234/ai-bankapp:0c07af611ddbe3309aad5309567bfe04669341b0
           ports:
             - containerPort: 8080
           envFrom:
