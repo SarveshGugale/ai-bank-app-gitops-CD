@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ai-bankapp-dev
+  namespace: argocd
+
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/SarveshGugale/ai-bank-app-gitops-CD.git
+    targetRevision: HEAD
+    path: manifests/dev
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: bankapp-dev
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
